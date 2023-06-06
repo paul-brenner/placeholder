@@ -16,6 +16,9 @@ dependencies:
   flowbite-svelte:
     specifier: ^0.37.4
     version: 0.37.4(svelte@3.59.1)
+  start:
+    specifier: ^5.1.0
+    version: 5.1.0
 
 devDependencies:
   '@playwright/test':
@@ -2313,6 +2316,12 @@ packages:
 
   /stack-trace@0.0.10:
     resolution: {integrity: sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg==}
+    dev: false
+
+  /start@5.1.0:
+    resolution: {integrity: sha512-lirwWQmvBC65bnxU3HzKx5m7vfZJZTx/FrKyPWbtobcvujGbinQQRrNodtcgkp4mTZ00umzDeg7lraN351l0aA==}
+    engines: {node: '>=4'}
+    deprecated: Deprecated in favor of https://github.com/deepsweet/start
     dev: false
 
   /streamsearch@1.1.0:
