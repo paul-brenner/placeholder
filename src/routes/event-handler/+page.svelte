@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	let submission_status = '';
 	const handle_submit = async (event: Event) => {
 		submission_status = 'submitting';
@@ -111,4 +111,4 @@
 			Back
 		</a>
 	</p>
-</div>
+</div> -->
