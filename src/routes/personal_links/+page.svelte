@@ -1,38 +1,72 @@
 <script>
-	import {
-		Img,
-		Navbar,
-		NavBrand,
-		NavHamburger,
-		NavUl,
-		NavLi,
-		Heading,
-		P,
-		Card
-	} from 'flowbite-svelte';
+	import Navbar from '/src/routes/Navbar.svelte';
+	import { Listgroup } from 'flowbite-svelte';
+	let request_links = [
+		{
+			name: 'Ryan W',
+			href: 'https://airtable.com/shrrzGGbt2gfEdeF0?prefill_Requester=Ryan%20Wegner&hide_Requester=true'
+		},
+		{
+			name: 'Paul B',
+			href: 'https://airtable.com/shrrzGGbt2gfEdeF0?prefill_Requester=Paul%20Brenner&hide_Requester=true'
+		},
+		{
+			name: 'Elizabeth W',
+			href: 'https://airtable.com/shrrzGGbt2gfEdeF0?prefill_Requester=Elizabeth%20Wegner&hide_Requester=true'
+		},
+		{
+			name: 'Mary L',
+			href: 'https://airtable.com/shrrzGGbt2gfEdeF0?prefill_Requester=Mary%20Lee&hide_Requester=true'
+		},
+		{
+			name: 'Elizabeth C',
+			href: 'https://airtable.com/shrrzGGbt2gfEdeF0?prefill_Requester=Elizabeth%20Cutrone&hide_Requester=true'
+		}
+	];
+	let submit_links = [
+		{
+			name: 'Ryan W',
+			href: 'https://airtable.com/shrAE34J3zD9D5NLp?prefill_Requester=Ryan%20Wegner&hide_Requester=true'
+		},
+		{
+			name: 'Paul B',
+			href: 'https://airtable.com/shrAE34J3zD9D5NLp?prefill_Requester=Paul%20Brenner&hide_Requester=true'
+		},
+		{
+			name: 'Elizabeth W',
+			href: 'https://airtable.com/shrAE34J3zD9D5NLp?prefill_Requester=Elizabeth%20Wegner&hide_Requester=true'
+		},
+		{
+			name: 'Mary L',
+			href: 'https://airtable.com/shrAE34J3zD9D5NLp?prefill_Requester=Mary%20Lee&hide_Requester=true'
+		},
+		{
+			name: 'Elizabeth C',
+			href: 'https://airtable.com/shrAE34J3zD9D5NLp?prefill_Requester=Elizabeth%20Cutrone&hide_Requester=true'
+		}
+	];
 </script>
 
 <div class="flex flex-col flex-grow">
-	<Navbar let:hidden let:toggle>
-		<NavBrand href="/">
-			<Img
-				src={'/images/crow-crown.png'}
-				alt="A Goldcrested Crow (wearing a crown)"
-				class="rounded-lg"
-				imgClass="h-8"
-			/>
-			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white px-5">
-				Goldcrested
-			</span>
-		</NavBrand>
-		<NavHamburger on:click={toggle} />
-		<NavUl {hidden}>
-			<NavLi href="/" active={true}>Home</NavLi>
-			<NavLi href="/personal_links">Personal Links</NavLi>
-			<NavLi href="/inspiration">Inspiration</NavLi>
-			<NavLi href="/privacy">Privacy</NavLi>
-			<NavLi href="/contact">Contact</NavLi>
-			<NavLi href="https://www.google.com/search?q=goldcrest&tbm=isch">Goldcrest Images</NavLi>
-		</NavUl>
-	</Navbar>
+	<Navbar />
 </div>
+
+<div class="flex flex-col flex-grow items-center justify-center py-20">
+    <div class="flex">
+        <div class="mr-24">
+            <h3 class="p-1 text-center text-xl font-medium text-gray-900 dark:text-white">
+                Recommendations
+            </h3>
+            <Listgroup active items={submit_links} let:item class="w-48">
+                {item.name}
+            </Listgroup>
+        </div>
+        <div>
+            <h3 class="p-1 text-center text-xl font-medium text-gray-900 dark:text-white">Requests</h3>
+            <Listgroup active items={request_links} let:item class="w-48">
+                {item.name}
+            </Listgroup>
+        </div>
+    </div>
+</div>
+
