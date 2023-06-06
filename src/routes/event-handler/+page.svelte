@@ -65,43 +65,6 @@
 				autocomplete="off"
 				class="input input-bordered w-full"
 			/>
-			<!-- <label for="visit_offerings" class="label">
-				<span class="label-text">Visit Offerings</span>
-			</label>
-			<input
-				type="visit_offerings"
-				name="visit_offerings"
-				aria-label="visit_offerings"
-				placeholder="Office"
-				required
-				autocomplete="off"
-				class="input input-bordered w-full"
-			/> -->
-			<!-- <label for="strength" class="label">
-				<span class="label-text">Strength</span>
-			</label>
-			<input
-				type="strength"
-				name="strength"
-				aria-label="strength"
-				placeholder="3"
-				required
-				autocomplete="off"
-				class="input input-bordered w-full"
-			/> -->
-			<!-- <label for="other" class="label">
-				<span class="label-text">Other</span>
-			</label>
-			<textarea
-				name="other"
-				aria-label="other"
-				placeholder="Any to add?"
-				required
-				rows="3"
-				autocomplete="off"
-				class="textarea input-bordered w-full mb-10"
-			/> -->
-
 			<input type="submit" value="Submit to Airtable" class="btn btn-primary w-full" />
 		</form>
 	{/if}
