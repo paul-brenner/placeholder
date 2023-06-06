@@ -17,7 +17,7 @@
 				recommendations and will explain at that time exactly what we want to share.
 			</p>
 			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-				You will have to opportunity to remove all data you have provided when we advance to the
+				You will have the opportunity to remove all data you have provided when we advance to the
 				next phase. Your recommendation strength will always be private and not visible to users or
 				providers.
 			</p>
