@@ -1,5 +1,5 @@
 <script>
-	import Navbar from '/src/routes/Navbar.svelte';
+	import MyNavbar from '/src/routes/MyNavbar.svelte';
 	import { Listgroup } from 'flowbite-svelte';
 
 	let list1 = ['Architect', 'Babysitter', 'Car Broker', 'Contractor', 'Dentist'];
@@ -35,7 +35,7 @@
 </script>
 
 <div class="flex flex-col flex-grow">
-	<Navbar />
+	<MyNavbar />
 </div>
 
 <div class="flex flex-col flex-grow items-center justify-center py-20">

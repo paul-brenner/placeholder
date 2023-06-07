@@ -1,10 +1,10 @@
 <script>
-	import Navbar from '/src/routes/Navbar.svelte';
+	import MyNavbar from '/src/routes/MyNavbar.svelte';
 	import { Card } from 'flowbite-svelte';
 </script>
 
 <div class="flex flex-col flex-grow">
-	<Navbar />
+	<MyNavbar />
 	<div class="flex flex-col flex-grow items-center justify-center py-20">
 		<Card class="text-center" size="lg" padding="xl">
 			<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Privacy Statement</h5>

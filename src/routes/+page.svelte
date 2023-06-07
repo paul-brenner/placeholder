@@ -11,11 +11,10 @@
 	}
 </script> -->
 <script>
-	import Navbar from './Navbar.svelte';
-	import { Img } from 'flowbite-svelte';
+	import MyNavbar from './MyNavbar.svelte';
+	import { Img, Card } from 'flowbite-svelte';
 </script>
 
-<Navbar />
 <!-- <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
@@ -53,13 +52,48 @@
 	With
 	<a href="/super-forms">SvelteKit Superforms</a>
 </p> -->
-<div class="flex flex-col flex-grow items-center justify-center py-20">
-	<Img
-		src={'/images/crow-crown.png'}
-		alt="A Goldcrested Crow (wearing a crown)"
-		alignment="mx-auto"
-		class="rounded-lg"
-	/>
+
+<div class="flex flex-col flex-grow">
+	<MyNavbar />
+	<div class="flex flex-col flex-grow items-center justify-center py-20">
+		<Card class="text-center" size="lg" padding="xl">
+			<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+				Thank you for being part of the first testing phase of our idea.
+			</h5>
+			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+				We’ve been thinking about how powerful referrals are when they come from a trusted friend or
+				family member. Oftentimes, the best result comes from that close connection instead of the
+				average opinion of the internet (Google or Yelp).
+			</p>
+			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+				The product we have in mind enables you to not only leverage your network to find the best
+				referrals, but also to supply your own recommendations and bring business to the providers
+				you love.
+			</p>
+			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+				Right now, we’re onboarding alpha testers so they can share their recommendations. Here’s a
+				list of ideas for inspiration, but we encourage you to recommend anything you yourself would
+				want to discover.
+			</p>
+			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+				We’re also asking testers to make requests for referrals anytime they’re looking for one
+				during this phase, and you might just find one through us.
+			</p>
+			<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+				Lastly, we need your feedback about anything and everything. What was it like to recommend a
+				provider? What was it like to request one? How do you see yourself using a product like
+				this, if at all? We want to hear it all.
+			</p>
+		</Card>
+	</div>
+	<div class="flex flex-col flex-grow items-center justify-center py-20">
+		<Img
+			src={'/images/crow-crown.png'}
+			alt="A Goldcrested Crow (wearing a crown)"
+			alignment="mx-auto"
+			class="rounded-lg"
+		/>
+	</div>
 </div>
 <!-- <div class="p-8">
 	<Alert>
