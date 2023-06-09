@@ -13,6 +13,15 @@
 <script>
 	import MyNavbar from './MyNavbar.svelte';
 	import { Img, Card } from 'flowbite-svelte';
+	// import GooglePlacesAutocomplete from 'svelte-google-places-autocomplete';
+
+	// const options = {
+	// 	fields: ['address_components', 'geometry'],
+	// 	types: ['(cities)']
+	// };
+	// const placeholder = 'Destination city';
+
+	// let locationName = localStorage.get('locationName') || '';
 </script>
 
 <!-- <Navbar let:hidden let:toggle>
@@ -95,6 +104,16 @@
 		/>
 	</div>
 </div>
+
+<!-- <GooglePlacesAutocomplete
+	apiKey={googlePlacesApiKey}
+	class="form-control"
+	on:place_changed={onPlaceChanged}
+	{options}
+	on:ready={onReady}
+	{placeholder}
+	value={locationName}
+/> -->
 <!-- <div class="p-8">
 	<Alert>
 		<span class="font-medium">Crow's gotta strut!</span>
