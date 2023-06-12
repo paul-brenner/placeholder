@@ -1,4 +1,4 @@
-// import { AIRTABLE_BASE_ID, AIRTABLE_API_KEY } from '$env/static/private'
+// import { AIRTABLE_BASE_ID, AIRTABLE_API_KEY } from '$env/static/public'
 // import { fail } from '@sveltejs/kit'
 // import { superValidate } from 'sveltekit-superforms/server'
 // import { z } from 'zod'

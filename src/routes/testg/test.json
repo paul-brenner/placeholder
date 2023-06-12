@@ -1,0 +1,565 @@
+{
+    "address_components": [
+        {
+            "long_name": "23rd Floor",
+            "short_name": "23rd Floor",
+            "types": [
+                "subpremise"
+            ]
+        },
+        {
+            "long_name": "370",
+            "short_name": "370",
+            "types": [
+                "street_number"
+            ]
+        },
+        {
+            "long_name": "Lexington Avenue",
+            "short_name": "Lexington Ave",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "long_name": "Manhattan",
+            "short_name": "Manhattan",
+            "types": [
+                "sublocality_level_1",
+                "sublocality",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York",
+            "short_name": "New York",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York County",
+            "short_name": "New York County",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York",
+            "short_name": "NY",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "long_name": "United States",
+            "short_name": "US",
+            "types": [
+                "country",
+                "political"
+            ]
+        },
+        {
+            "long_name": "10017",
+            "short_name": "10017",
+            "types": [
+                "postal_code"
+            ]
+        }
+    ],
+    "adr_address": "<span class=\"street-address\">370 Lexington Ave 23rd Floor</span>, <span class=\"locality\">New York</span>, <span class=\"region\">NY</span> <span class=\"postal-code\">10017</span>, <span class=\"country-name\">USA</span>",
+    "business_status": "OPERATIONAL",
+    "formatted_address": "370 Lexington Ave 23rd Floor, New York, NY 10017, USA",
+    "geometry": {
+        "location": {
+            "lat": 40.7507224,
+            "lng": -73.9768828
+        },
+        "viewport": {
+            "south": 40.7493984697085,
+            "west": -73.9781729302915,
+            "north": 40.75209643029149,
+            "east": -73.9754749697085
+        }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "TK PT - Tyler J. Kenton, DPT",
+    "place_id": "ChIJXe8alk5ZwokR7n8maNEJTg0",
+    "plus_code": {
+        "compound_code": "Q22F+76 New York, NY, USA",
+        "global_code": "87G8Q22F+76"
+    },
+    "reference": "ChIJXe8alk5ZwokR7n8maNEJTg0",
+    "types": [
+        "physiotherapist",
+        "health",
+        "point_of_interest",
+        "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=958714565676662766",
+    "utc_offset": -240,
+    "vicinity": "370 Lexington Avenue 23rd Floor, New York",
+    "website": "http://www.tylerkpt.com/",
+    "html_attributions": [],
+    "utc_offset_minutes": -240
+}
+
+{
+    "address_components": [
+        {
+            "long_name": "369",
+            "short_name": "369",
+            "types": [
+                "street_number"
+            ]
+        },
+        {
+            "long_name": "Broome Street",
+            "short_name": "Broome St",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "long_name": "Manhattan",
+            "short_name": "Manhattan",
+            "types": [
+                "sublocality_level_1",
+                "sublocality",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York",
+            "short_name": "New York",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York County",
+            "short_name": "New York County",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "long_name": "New York",
+            "short_name": "NY",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "long_name": "United States",
+            "short_name": "US",
+            "types": [
+                "country",
+                "political"
+            ]
+        },
+        {
+            "long_name": "10013",
+            "short_name": "10013",
+            "types": [
+                "postal_code"
+            ]
+        }
+    ],
+    "adr_address": "<span class=\"street-address\">369 Broome St</span>, <span class=\"locality\">New York</span>, <span class=\"region\">NY</span> <span class=\"postal-code\">10013</span>, <span class=\"country-name\">USA</span>",
+    "business_status": "OPERATIONAL",
+    "current_opening_hours": {
+        "open_now": false,
+        "periods": [
+            {
+                "close": {
+                    "date": "2023-06-18",
+                    "day": 0,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-18",
+                    "day": 0,
+                    "time": "1000"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-12",
+                    "day": 1,
+                    "time": "1700"
+                },
+                "open": {
+                    "date": "2023-06-12",
+                    "day": 1,
+                    "time": "0900"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-13",
+                    "day": 2,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-13",
+                    "day": 2,
+                    "time": "0900"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-14",
+                    "day": 3,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-14",
+                    "day": 3,
+                    "time": "0900"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-15",
+                    "day": 4,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-15",
+                    "day": 4,
+                    "time": "0900"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-16",
+                    "day": 5,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-16",
+                    "day": 5,
+                    "time": "0900"
+                }
+            },
+            {
+                "close": {
+                    "date": "2023-06-17",
+                    "day": 6,
+                    "time": "1800"
+                },
+                "open": {
+                    "date": "2023-06-17",
+                    "day": 6,
+                    "time": "1000"
+                }
+            }
+        ],
+        "weekday_text": [
+            "Monday: 9:00 AM – 5:00 PM",
+            "Tuesday: 9:00 AM – 6:00 PM",
+            "Wednesday: 9:00 AM – 6:00 PM",
+            "Thursday: 9:00 AM – 6:00 PM",
+            "Friday: 9:00 AM – 6:00 PM",
+            "Saturday: 10:00 AM – 6:00 PM",
+            "Sunday: 10:00 AM – 6:00 PM"
+        ]
+    },
+    "formatted_address": "369 Broome St, New York, NY 10013, USA",
+    "formatted_phone_number": "(212) 219-0246",
+    "geometry": {
+        "location": {
+            "lat": 40.7200446,
+            "lng": -73.9959894
+        },
+        "viewport": {
+            "south": 40.7187069697085,
+            "west": -73.9973870802915,
+            "north": 40.7214049302915,
+            "east": -73.9946891197085
+        }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "international_phone_number": "+1 212-219-0246",
+    "name": "KIDA NYC",
+    "opening_hours": {
+        "open_now": false,
+        "periods": [
+            {
+                "close": {
+                    "day": 0,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1687125600000
+                },
+                "open": {
+                    "day": 0,
+                    "time": "1000",
+                    "hours": 10,
+                    "minutes": 0,
+                    "nextDate": 1687096800000
+                }
+            },
+            {
+                "close": {
+                    "day": 1,
+                    "time": "1700",
+                    "hours": 17,
+                    "minutes": 0,
+                    "nextDate": 1686603600000
+                },
+                "open": {
+                    "day": 1,
+                    "time": "0900",
+                    "hours": 9,
+                    "minutes": 0,
+                    "nextDate": 1686574800000
+                }
+            },
+            {
+                "close": {
+                    "day": 2,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1686693600000
+                },
+                "open": {
+                    "day": 2,
+                    "time": "0900",
+                    "hours": 9,
+                    "minutes": 0,
+                    "nextDate": 1686661200000
+                }
+            },
+            {
+                "close": {
+                    "day": 3,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1686780000000
+                },
+                "open": {
+                    "day": 3,
+                    "time": "0900",
+                    "hours": 9,
+                    "minutes": 0,
+                    "nextDate": 1686747600000
+                }
+            },
+            {
+                "close": {
+                    "day": 4,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1686866400000
+                },
+                "open": {
+                    "day": 4,
+                    "time": "0900",
+                    "hours": 9,
+                    "minutes": 0,
+                    "nextDate": 1686834000000
+                }
+            },
+            {
+                "close": {
+                    "day": 5,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1686952800000
+                },
+                "open": {
+                    "day": 5,
+                    "time": "0900",
+                    "hours": 9,
+                    "minutes": 0,
+                    "nextDate": 1686920400000
+                }
+            },
+            {
+                "close": {
+                    "day": 6,
+                    "time": "1800",
+                    "hours": 18,
+                    "minutes": 0,
+                    "nextDate": 1687039200000
+                },
+                "open": {
+                    "day": 6,
+                    "time": "1000",
+                    "hours": 10,
+                    "minutes": 0,
+                    "nextDate": 1687010400000
+                }
+            }
+        ],
+        "weekday_text": [
+            "Monday: 9:00 AM – 5:00 PM",
+            "Tuesday: 9:00 AM – 6:00 PM",
+            "Wednesday: 9:00 AM – 6:00 PM",
+            "Thursday: 9:00 AM – 6:00 PM",
+            "Friday: 9:00 AM – 6:00 PM",
+            "Saturday: 10:00 AM – 6:00 PM",
+            "Sunday: 10:00 AM – 6:00 PM"
+        ]
+    },
+    "photos": [
+        {
+            "height": 3024,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/106622831094783562236\">Tim Hung</a>"
+            ],
+            "width": 4032
+        },
+        {
+            "height": 641,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 1140
+        },
+        {
+            "height": 4608,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/104361806645745079500\">Luigi Gucia</a>"
+            ],
+            "width": 2592
+        },
+        {
+            "height": 741,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 739
+        },
+        {
+            "height": 3060,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 2448
+        },
+        {
+            "height": 2048,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 2048
+        },
+        {
+            "height": 727,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 750
+        },
+        {
+            "height": 3264,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 2448
+        },
+        {
+            "height": 4080,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/114113277195749105475\">Alejandro Rodriguez</a>"
+            ],
+            "width": 3072
+        },
+        {
+            "height": 2447,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/108746286141311041128\">KIDA NYC</a>"
+            ],
+            "width": 2447
+        }
+    ],
+    "place_id": "ChIJPzQ1iohZwokRna1uZtvI4wQ",
+    "plus_code": {
+        "compound_code": "P2C3+2J New York, NY, USA",
+        "global_code": "87G8P2C3+2J"
+    },
+    "rating": 4.8,
+    "reference": "ChIJPzQ1iohZwokRna1uZtvI4wQ",
+    "reviews": [
+        {
+            "author_name": "Eric Kim",
+            "author_url": "https://www.google.com/maps/contrib/103423829586579941384/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AD_cMMQNDTvTzGO9mV9EAAl9NxgbJeIlJb-BEkhtksyUZq0=s128-c0x00000000-cc-rp-mo-ba4",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "I loved the experience here!!\nThe Japanese hair stylist knows his stuff as he worked in this shop for 19 years!!! (Same one for 19 years) + he was very friendly :-)\n\nThe vibe was good and pricing was also goo for the service I received 🥰\nI got my hair cut for $47+ tip (15-18% tip)\n\nI would come again",
+            "time": 1633547196
+        },
+        {
+            "author_name": "Yiannis Psaroudis",
+            "author_url": "https://www.google.com/maps/contrib/104097430640692892806/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AD_cMMRc7Wld4HCDnNpaM4e1JpVrL0PHSW1_F5ArjsZ7=s128-c0x00000000-cc-rp-mo-ba2",
+            "rating": 5,
+            "relative_time_description": "2 months ago",
+            "text": "I love KIDA NYC. The support staff is super helpful when it comes to booking appointments & make customers feel welcome from the moment they enter the shop. The stylists are proficient, listen to their clients & have no ego—I’ve gone to different stylists when mine wasn’t available & I needed a cut, & there was no attitude about it. Also, location is great because you’ll want to grab a matcha or do some shopping, after your appointment, to show off your new ‘do.",
+            "time": 1678980143
+        },
+        {
+            "author_name": "simon yirka-folsom",
+            "author_url": "https://www.google.com/maps/contrib/109009538687247091477/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AD_cMMSeUBTs_Yrzr6AVnaIoWtSVesSJBrXxhXiffBTT=s128-c0x00000000-cc-rp-mo-ba2",
+            "rating": 5,
+            "relative_time_description": "5 months ago",
+            "text": "Taka cut my hair and trimmed my beard. He was very attentive to what I wanted. Otherwise, he didn't say a word. It was great, because I always feel super awkward having to talk to my barber. Wonderful time, I'll definitely go back.",
+            "time": 1673378991
+        },
+        {
+            "author_name": "JunQi Zhai",
+            "author_url": "https://www.google.com/maps/contrib/114491572531008820590/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AD_cMMSFKhJOt3pU4lMYR4Iv6e9rivtNCfgcgI_9NUXCpQ=s128-c0x00000000-cc-rp-mo-ba3",
+            "rating": 5,
+            "relative_time_description": "2 months ago",
+            "text": "KIDA has been my go-to barbershop for the past 5+ years. Yohei is attentive and consistent, is a pleasure to speak with, and understands precisely what I want each time. The interior aesthetics is calming, full of lush greenery and hip vibes. The front desk is also extremely welcoming, occasionally even offering me pour-over coffee while I waited. I recently recommended a friend to Yohei, and he absolutely loved KIDA.",
+            "time": 1679335270
+        },
+        {
+            "author_name": "Meg Dudley",
+            "author_url": "https://www.google.com/maps/contrib/107396975801436036325/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AD_cMMQsZpumoIXdS-kNSh-pWxwIcvzWJvej7zJXOM08-Q=s128-c0x00000000-cc-rp-mo",
+            "rating": 1,
+            "relative_time_description": "in the last week",
+            "text": "An awful experience. I booked appointments for my kids over a month ago, we traveled in from Brooklyn and when we got there were asked to wait \"30 or so minutes\" because \"someone else\" had made a mistake and double booked. The other person wasn't even there yet, but they happily turned us away. Never going back and definitely don't recommend for children. If they think they can have a 5 and 3 year old wait, they clearly don't service kids.",
+            "time": 1686428381
+        }
+    ],
+    "types": [
+        "hair_care",
+        "point_of_interest",
+        "establishment"
+    ],
+    "url": "https://maps.google.com/?cid=352346040506953117",
+    "user_ratings_total": 216,
+    "utc_offset": -240,
+    "vicinity": "369 Broome Street, New York",
+    "website": "https://kidanyc.com/",
+    "html_attributions": [],
+    "utc_offset_minutes": -240
+}

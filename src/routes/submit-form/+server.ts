@@ -1,7 +1,7 @@
 // import {
 //     AIRTABLE_API_KEY,
 //     AIRTABLE_BASE_ID,
-// } from '$env/static/private'
+// } from '$env/static/public'
 // import { json } from '@sveltejs/kit'
 
 // export const POST = async ({ request }) => {

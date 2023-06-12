@@ -1,11 +1,8 @@
-
 <script>
 	import MyNavbar from './MyNavbar.svelte';
 	import { Img, Card } from 'flowbite-svelte';
 	import GooglePlacesAutocomplete from '@beyowi/svelte-google-places-autocomplete';
-	import { GOOGLEPLACESAPIKEY } from '$env/static/private';
-	// const googlePlacesApiKey = process.env.GOOGLE_PLACES_API_KEY;
-
+	import { GOOGLEPLACESAPIKEY } from '$env/static/public';
 
 	const options = {
 		fields: ['address_components', 'geometry'],
@@ -65,11 +62,10 @@
 	value={locationName}
 /> -->
 
-	<!-- on:place_changed={onPlaceChanged}
+<!-- on:place_changed={onPlaceChanged}
 	{options}
 	on:ready={onReady}
 	{placeholder} -->
-
 
 <!-- <div class="p-8">
 	<Alert>
@@ -99,7 +95,6 @@
 		bird_nerd = 'Goldcrest Images';
 	}
 </script> -->
-
 
 <!-- <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
