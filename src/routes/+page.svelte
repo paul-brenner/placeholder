@@ -1,66 +1,20 @@
-<!-- <script>
-	import { Alert, Img, Navbar, NavBrand, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
-	let bird_nerd = 'Goldcrest Images';
 
-	function handleMouseOver() {
-		bird_nerd = 'See The Nerd Bird';
-	}
-
-	function handleMouseOut() {
-		bird_nerd = 'Goldcrest Images';
-	}
-</script> -->
 <script>
 	import MyNavbar from './MyNavbar.svelte';
 	import { Img, Card } from 'flowbite-svelte';
-	// import GooglePlacesAutocomplete from 'svelte-google-places-autocomplete';
+	import GooglePlacesAutocomplete from '@beyowi/svelte-google-places-autocomplete';
+	import { GOOGLEPLACESAPIKEY } from '$env/static/private';
+	// const googlePlacesApiKey = process.env.GOOGLE_PLACES_API_KEY;
 
-	// const options = {
-	// 	fields: ['address_components', 'geometry'],
-	// 	types: ['(cities)']
-	// };
-	// const placeholder = 'Destination city';
+
+	const options = {
+		fields: ['address_components', 'geometry'],
+		types: ['(cities)']
+	};
+	const placeholder = 'New York City';
 
 	// let locationName = localStorage.get('locationName') || '';
 </script>
-
-<!-- <Navbar let:hidden let:toggle>
-	<NavBrand href="/">
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-			Goldcrested
-		</span>
-	</NavBrand>
-	<NavHamburger on:click={toggle} />
-	<NavUl {hidden}>
-		<NavLi href="/" active={true}>Home</NavLi>
-		<NavLi href="/personal_links">Personal Links</NavLi>
-		<NavLi href="/inspiration">Inspiration</NavLi>
-		<NavLi href="/privacy">Privacy</NavLi>
-		<NavLi href="/contact">Contact</NavLi>
-		<NavLi href="/bird_nerd" on:mouseover={handleMouseOver} on:mouseleave={handleMouseOut}>
-			{bird_nerd}
-		</NavLi>
-	</NavUl>
-</Navbar> -->
-
-<!-- <h1>SvelteKit contact form submission with Airtable</h1>
-
-<p>Several ways to submit form data.</p>
-
-<p>
-	With an
-	<a href="/event-handler">Event handler</a>
-</p>
-
-<p>
-	With an
-	<a href="/action">Action</a>
-</p>
-
-<p>
-	With
-	<a href="/super-forms">SvelteKit Superforms</a>
-</p> -->
 
 <div class="flex flex-col flex-grow">
 	<MyNavbar />
@@ -108,12 +62,15 @@
 <!-- <GooglePlacesAutocomplete
 	apiKey={googlePlacesApiKey}
 	class="form-control"
-	on:place_changed={onPlaceChanged}
-	{options}
-	on:ready={onReady}
-	{placeholder}
 	value={locationName}
 /> -->
+
+	<!-- on:place_changed={onPlaceChanged}
+	{options}
+	on:ready={onReady}
+	{placeholder} -->
+
+
 <!-- <div class="p-8">
 	<Alert>
 		<span class="font-medium">Crow's gotta strut!</span>
@@ -129,3 +86,55 @@
 	height="533"
 	style="background: transparent; border: 1px solid #ccc;"
 /> -->
+
+<!-- <script>
+	import { Alert, Img, Navbar, NavBrand, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
+	let bird_nerd = 'Goldcrest Images';
+
+	function handleMouseOver() {
+		bird_nerd = 'See The Nerd Bird';
+	}
+
+	function handleMouseOut() {
+		bird_nerd = 'Goldcrest Images';
+	}
+</script> -->
+
+
+<!-- <Navbar let:hidden let:toggle>
+	<NavBrand href="/">
+		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+			Goldcrested
+		</span>
+	</NavBrand>
+	<NavHamburger on:click={toggle} />
+	<NavUl {hidden}>
+		<NavLi href="/" active={true}>Home</NavLi>
+		<NavLi href="/personal_links">Personal Links</NavLi>
+		<NavLi href="/inspiration">Inspiration</NavLi>
+		<NavLi href="/privacy">Privacy</NavLi>
+		<NavLi href="/contact">Contact</NavLi>
+		<NavLi href="/bird_nerd" on:mouseover={handleMouseOver} on:mouseleave={handleMouseOut}>
+			{bird_nerd}
+		</NavLi>
+	</NavUl>
+</Navbar> -->
+
+<!-- <h1>SvelteKit contact form submission with Airtable</h1>
+
+<p>Several ways to submit form data.</p>
+
+<p>
+	With an
+	<a href="/event-handler">Event handler</a>
+</p>
+
+<p>
+	With an
+	<a href="/action">Action</a>
+</p>
+
+<p>
+	With
+	<a href="/super-forms">SvelteKit Superforms</a>
+</p> -->
