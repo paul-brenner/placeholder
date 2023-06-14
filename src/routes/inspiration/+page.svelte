@@ -34,9 +34,7 @@
 	];
 </script>
 
-<div class="flex flex-col flex-grow">
-	<MyNavbar />
-</div>
+<div class="flex flex-col flex-grow" />
 
 <div class="flex flex-col flex-grow items-center justify-center py-20">
 	<div class="flex justify-between w-2/3 max-w-screen-lg">

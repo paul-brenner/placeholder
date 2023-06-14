@@ -1,20 +1,8 @@
 <script>
-	import MyNavbar from './MyNavbar.svelte';
 	import { Img, Card } from 'flowbite-svelte';
-	import GooglePlacesAutocomplete from '@beyowi/svelte-google-places-autocomplete';
-	import { GOOGLEPLACESAPIKEY } from '$env/static/public';
-
-	const options = {
-		fields: ['address_components', 'geometry'],
-		types: ['(cities)']
-	};
-	const placeholder = 'New York City';
-
-	// let locationName = localStorage.get('locationName') || '';
 </script>
 
 <div class="flex flex-col flex-grow">
-	<MyNavbar />
 	<div class="flex flex-col flex-grow items-center justify-center py-20">
 		<Card class="text-center" size="lg" padding="xl">
 			<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
@@ -47,14 +35,16 @@
 		</Card>
 	</div>
 	<div class="flex flex-col flex-grow items-center justify-center py-20">
-<a href="https://airtable.com/shrAE34J3zD9D5NLp?prefill_Recommender=Quick%20Phone&hide_Recommender=true">
-    <Img
-        src={'/images/crow-crown.png'}
-        alt="A Goldcrested Crow (wearing a crown)"
-        alignment="mx-auto"
-        class="rounded-lg"
-    />
-</a>
+		<a
+			href="https://airtable.com/shrAE34J3zD9D5NLp?prefill_Recommender=Quick%20Phone&hide_Recommender=true"
+		>
+			<Img
+				src={'/images/crow-crown.png'}
+				alt="A Goldcrested Crow (wearing a crown)"
+				alignment="mx-auto"
+				class="rounded-lg"
+			/>
+		</a>
 	</div>
 </div>
 

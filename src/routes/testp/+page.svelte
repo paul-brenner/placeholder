@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	// import Icon from 'fa-svelte'
 	// import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 	import GooglePlacesAutocomplete from '@beyowi/svelte-google-places-autocomplete';
@@ -62,4 +62,4 @@
 			value={description}
 		/>
 	{/if}
-</div>
+</div> -->

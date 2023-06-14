@@ -1,5 +1,4 @@
 <script>
-	import MyNavbar from '/src/routes/MyNavbar.svelte';
 	import { Label, Input, Helper } from 'flowbite-svelte';
 	import { Alert } from 'flowbite-svelte';
 	import { Envelope } from 'svelte-heros-v2';
@@ -39,7 +38,6 @@
 </Alert>
 
 <div class="flex flex-col flex-grow">
-	<MyNavbar />
 	<div class="flex flex-col flex-grow items-center justify-center py-20">
 		<Label class="space-y-2">
 			<span>Small input - left icon</span>

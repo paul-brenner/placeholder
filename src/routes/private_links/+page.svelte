@@ -1,5 +1,4 @@
 <script>
-	import MyNavbar from '/src/routes/MyNavbar.svelte';
 	import { Listgroup } from 'flowbite-svelte';
 
 	let names = ['Ryan Wegner', 'Paul Brenner ', 'Elizabeth Wegner', 'Mary Lee', 'Elizabeth Cutrone'];
@@ -27,13 +26,9 @@
 				'&hide_Requester=true'
 		};
 	});
-
-
 </script>
 
-<div class="flex flex-col flex-grow">
-	<MyNavbar />
-</div>
+<div class="flex flex-col flex-grow" />
 
 <div class="flex flex-col flex-grow items-center justify-center py-20">
 	<div class="flex">
