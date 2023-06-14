@@ -1,6 +1,6 @@
-import { c as create_ssr_component, d as compute_rest_props, v as validate_component, a as add_attribute } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, h as compute_rest_props, v as validate_component, d as add_attribute } from "./index.js";
 import { F as Frame } from "./Frame.js";
+import { t as twMerge } from "./tw-merge.js";
 const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["href", "horizontal", "reverse", "img", "padding", "size"]);
   let { href = void 0 } = $$props;
@@ -39,7 +39,7 @@ const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.size === void 0 && $$bindings.size && size !== void 0)
     $$bindings.size(size);
   innerPdding = paddings[padding];
-  cardClass = classNames(
+  cardClass = twMerge(
     "flex",
     sizes[size],
     reverse ? "flex-col-reverse" : "flex-col",
@@ -48,7 +48,7 @@ const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     !img && innerPdding,
     $$props.class
   );
-  imgClass = classNames(reverse ? "rounded-b-lg" : "rounded-t-lg", horizontal && "object-cover w-full h-96 md:h-auto md:w-48 md:rounded-none", horizontal && (reverse ? "md:rounded-r-lg" : "md:rounded-l-lg"));
+  imgClass = twMerge(reverse ? "rounded-b-lg" : "rounded-t-lg", horizontal && "object-cover w-full h-96 md:h-auto md:w-48 md:rounded-none", horizontal && (reverse ? "md:rounded-r-lg" : "md:rounded-l-lg"));
   return `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, { tag: href ? "a" : "div" }, { rounded: true }, { shadow: true }, { border: true }, { href }, $$restProps, { class: cardClass }), {}, {
     default: () => {
       return `${img ? `<img${add_attribute("class", imgClass, 0)}${add_attribute("src", img, 0)} alt="">

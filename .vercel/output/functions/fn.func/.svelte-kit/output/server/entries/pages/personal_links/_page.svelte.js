@@ -1,65 +1,74 @@
-import { c as create_ssr_component, d as compute_rest_props, v as validate_component, a as add_attribute, m as createEventDispatcher, o as add_classes, l as compute_slots, s as spread, f as escape_object, g as escape_attribute_value } from "../../../chunks/index.js";
-import classNames from "classnames";
+import { o as identity, c as create_ssr_component, h as compute_rest_props, v as validate_component, d as add_attribute, p as createEventDispatcher, q as compute_slots, i as spread, k as escape_object, j as escape_attribute_value } from "../../../chunks/index.js";
 import { T as ToolbarButton } from "../../../chunks/ToolbarButton.js";
+import { t as twMerge } from "../../../chunks/tw-merge.js";
 import { F as Frame } from "../../../chunks/Frame.js";
-/* empty css                                                       */import { L as Label } from "../../../chunks/Label.js";
-import { I as Input } from "../../../chunks/Input.js";
+/* empty css                                                       */import { L as Label, I as Input } from "../../../chunks/Input.js";
+function fade(node, { delay = 0, duration = 400, easing = identity } = {}) {
+  const o = +getComputedStyle(node).opacity;
+  return {
+    delay,
+    duration,
+    easing,
+    css: (t) => `opacity: ${t * o}`
+  };
+}
 const CloseButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["name"]);
   let { name = "Close" } = $$props;
   if ($$props.name === void 0 && $$bindings.name && name !== void 0)
     $$bindings.name(name);
-  return `${validate_component(ToolbarButton, "ToolbarButton").$$render(
-    $$result,
-    Object.assign({}, { name }, $$restProps, {
-      class: classNames("ml-auto", $$props.class)
-    }),
-    {},
-    {
-      default: ({ svgSize }) => {
-        return `<svg${add_attribute("class", svgSize, 0)} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
-      }
+  return `${validate_component(ToolbarButton, "ToolbarButton").$$render($$result, Object.assign({}, { name }, $$restProps, { class: twMerge("ml-auto", $$props.class) }), {}, {
+    default: ({ svgSize }) => {
+      return `<svg${add_attribute("class", svgSize, 0)} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
     }
-  )}
+  })}
 
 `;
 });
 const Alert = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$restProps = compute_rest_props($$props, ["dismissable", "accent"]);
+  let $$restProps = compute_rest_props($$props, ["dismissable", "defaultClass"]);
   let $$slots = compute_slots(slots);
   let { dismissable = false } = $$props;
-  let { accent = false } = $$props;
-  createEventDispatcher();
-  let hidden = false;
+  let { defaultClass = "p-4 gap-3 text-sm" } = $$props;
+  const dispatch = createEventDispatcher();
+  let open = true;
+  const close = () => {
+    open = false;
+    dispatch("close");
+  };
   let divClass;
   if ($$props.dismissable === void 0 && $$bindings.dismissable && dismissable !== void 0)
     $$bindings.dismissable(dismissable);
-  if ($$props.accent === void 0 && $$bindings.accent && accent !== void 0)
-    $$bindings.accent(accent);
-  divClass = classNames("p-4 text-sm", accent && "border-t-4 ", hidden, $$props.class);
+  if ($$props.defaultClass === void 0 && $$bindings.defaultClass && defaultClass !== void 0)
+    $$bindings.defaultClass(defaultClass);
+  divClass = twMerge(defaultClass, ($$slots.icon || dismissable) && "flex items-center", $$props.class);
   {
     {
-      $$restProps.color = $$restProps.color ?? "blue";
-      $$restProps.rounded = $$restProps.rounded ?? !accent;
+      $$restProps.color = $$restProps.color ?? "primary";
+      $$restProps.rounded = $$restProps.rounded ?? true;
+      if (dismissable)
+        $$restProps.transition = $$restProps.transition ?? fade;
     }
   }
-  return `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, $$restProps, { class: divClass }, { role: "alert" }), {}, {
+  return `${open ? `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, $$restProps, { class: divClass }, { role: "alert" }), {}, {
     default: () => {
-      return `<div class="flex items-center">${$$slots.icon ? `${slots.icon ? slots.icon({}) : ``}` : ``}
-    <div${add_classes(($$slots.icon ? "ml-3" : "").trim())}>${slots.default ? slots.default({}) : ``}</div>
+      return `${$$slots.icon ? `${slots.icon ? slots.icon({}) : ``}` : ``}
 
-    ${dismissable ? `${validate_component(CloseButton, "CloseButton").$$render(
+    ${$$slots.icon || dismissable ? `<div>${slots.default ? slots.default({}) : ``}</div>` : `${slots.default ? slots.default({}) : ``}`}
+
+    ${dismissable ? `${slots["close-button"] ? slots["close-button"]({ close }) : `
+        ${validate_component(CloseButton, "CloseButton").$$render(
         $$result,
         {
-          class: "-mx-1.5 -my-1.5",
+          class: "'-mx-1.5 -my-1.5'",
           color: $$restProps.color
         },
         {},
         {}
-      )}` : ``}</div>
-  ${slots.extra ? slots.extra({}) : ``}`;
+      )}
+      `}` : ``}`;
     }
-  })}
+  })}` : ``}
 
 `;
 });
@@ -81,7 +90,7 @@ const Helper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     [
       escape_object($$restProps),
       {
-        class: escape_attribute_value(classNames(helperClass, colorClasses[color], $$props.class))
+        class: escape_attribute_value(twMerge(helperClass, colorClasses[color], $$props.class))
       }
     ],
     {}

@@ -1,5 +1,5 @@
 <script>
-	import {Img, Navbar, NavBrand, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
+	import { Img, Navbar, NavBrand, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
 	let bird_nerd = 'Goldcrest Images';
 
 	function handleMouseOver() {
@@ -27,8 +27,8 @@
 	<NavHamburger on:click={toggle} />
 	<NavUl {hidden}>
 		<NavLi href="/" active={true}>Home</NavLi>
-		<NavLi href="/personal_links">Personal Links</NavLi>
-		<NavLi href="/inspiration">Inspiration</NavLi>
+		<!-- <NavLi href="/personal_links">Personal Links</NavLi> -->
+		<NavLi href="/feed">Feed</NavLi>
 		<NavLi href="/privacy">Privacy</NavLi>
 		<!-- <NavLi href="/contact">Contact</NavLi> -->
 		<NavLi

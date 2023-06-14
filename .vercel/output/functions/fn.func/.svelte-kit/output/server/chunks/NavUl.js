@@ -1,6 +1,6 @@
-import { c as create_ssr_component, d as compute_rest_props, v as validate_component, a as add_attribute, s as spread, g as escape_attribute_value, f as escape_object, h as getContext, j as is_void, i as setContext } from "./index.js";
+import { c as create_ssr_component, h as compute_rest_props, v as validate_component, d as add_attribute, i as spread, j as escape_attribute_value, k as escape_object, g as getContext, l as is_void, a as setContext } from "./index.js";
 import { F as Frame } from "./Frame.js";
-import classNames from "classnames";
+import { t as twMerge } from "./tw-merge.js";
 import { T as ToolbarButton } from "./ToolbarButton.js";
 function quintOut(t) {
   return --t * t * t * t * t + 1;
@@ -25,18 +25,11 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$restProps.color = $$restProps.color ?? "navbar";
     }
   }
-  return `${validate_component(Frame, "Frame").$$render(
-    $$result,
-    Object.assign({}, { tag: "nav" }, $$restProps, {
-      class: classNames(navClass, $$props.class)
-    }),
-    {},
-    {
-      default: () => {
-        return `<div${add_attribute("class", classNames(navDivClass, fluid && "w-full" || "container"), 0)}>${slots.default ? slots.default({ hidden, toggle }) : ``}</div>`;
-      }
+  return `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, { tag: "nav" }, $$restProps, { class: twMerge(navClass, $$props.class) }), {}, {
+    default: () => {
+      return `<div${add_attribute("class", twMerge(navDivClass, fluid && "w-full" || "container"), 0)}>${slots.default ? slots.default({ hidden, toggle }) : ``}</div>`;
     }
-  )}
+  })}
 
 `;
 });
@@ -50,7 +43,7 @@ const NavBrand = create_ssr_component(($$result, $$props, $$bindings, slots) => 
       { href: escape_attribute_value(href) },
       escape_object($$restProps),
       {
-        class: escape_attribute_value(classNames("flex items-center", $$props.class))
+        class: escape_attribute_value(twMerge("flex items-center", $$props.class))
       }
     ],
     {}
@@ -119,18 +112,11 @@ const NavHamburger = create_ssr_component(($$result, $$props, $$bindings, slots)
   let { btnClass = "ml-3 md:hidden" } = $$props;
   if ($$props.btnClass === void 0 && $$bindings.btnClass && btnClass !== void 0)
     $$bindings.btnClass(btnClass);
-  return `${validate_component(ToolbarButton, "ToolbarButton").$$render(
-    $$result,
-    Object.assign({}, { name: "Open main menu" }, $$restProps, {
-      class: classNames(btnClass, $$props.class)
-    }),
-    {},
-    {
-      default: () => {
-        return `${validate_component(Menu, "Menu").$$render($$result, { class: "h-6 w-6 shrink-0" }, {}, {})}`;
-      }
+  return `${validate_component(ToolbarButton, "ToolbarButton").$$render($$result, Object.assign({}, { name: "Open main menu" }, $$restProps, { class: twMerge(btnClass, $$props.class) }), {}, {
+    default: () => {
+      return `${validate_component(Menu, "Menu").$$render($$result, { class: "h-6 w-6 shrink-0" }, {}, {})}`;
     }
-  )}
+  })}
 
 `;
 });
@@ -150,7 +136,7 @@ const NavLi = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.activeClass(activeClass);
   if ($$props.nonActiveClass === void 0 && $$bindings.nonActiveClass && nonActiveClass !== void 0)
     $$bindings.nonActiveClass(nonActiveClass);
-  liClass = classNames(
+  liClass = twMerge(
     "block py-2 pr-4 pl-3 md:p-0 rounded md:border-0",
     active ? activeClass ?? context.activeClass : nonActiveClass ?? context.nonActiveClass,
     $$props.class
@@ -181,8 +167,8 @@ const NavUl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     duration: 500,
     easing: quintOut
   } } = $$props;
-  let { activeClass = "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" } = $$props;
-  let { nonActiveClass = "text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" } = $$props;
+  let { activeClass = "text-white bg-primary-700 md:bg-transparent md:text-primary-700 md:dark:text-white dark:bg-primary-600 md:dark:bg-transparent" } = $$props;
+  let { nonActiveClass = "text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" } = $$props;
   setContext("navbar", { activeClass, nonActiveClass });
   let _divClass;
   let _ulClass;
@@ -198,8 +184,8 @@ const NavUl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.activeClass(activeClass);
   if ($$props.nonActiveClass === void 0 && $$bindings.nonActiveClass && nonActiveClass !== void 0)
     $$bindings.nonActiveClass(nonActiveClass);
-  _divClass = classNames(divClass, $$props.class);
-  _ulClass = classNames(
+  _divClass = twMerge(divClass, $$props.class);
+  _ulClass = twMerge(
     ulClass,
     // 'divide-y md:divide-y-0 divide-gray-100 dark:divide-gray-700',
     $$props.class

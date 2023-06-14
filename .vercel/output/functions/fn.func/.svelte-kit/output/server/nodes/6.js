@@ -1,7 +1,7 @@
 
 
 export const index = 6;
-export const component = async () => (await import('../entries/pages/event-handler/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/6.cea32d86.js","_app/immutable/chunks/index.65d03eb6.js"];
-export const stylesheets = [];
+export const component = async () => (await import('../entries/pages/inspiration/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/6.9671616a.js","_app/immutable/chunks/index.651b1808.js","_app/immutable/chunks/Listgroup.8c222c36.js","_app/immutable/chunks/tw-merge.2cd9e3ed.js","_app/immutable/chunks/Frame.f33a0f76.js"];
+export const stylesheets = ["_app/immutable/assets/Indicator.1d121e74.css"];
 export const fonts = [];

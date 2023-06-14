@@ -1,4 +1,4 @@
-import { c as create_ssr_component, i as setContext, v as validate_component, p as missing_component } from "./index.js";
+import { c as create_ssr_component, a as setContext, v as validate_component, m as missing_component } from "./index.js";
 let base = "";
 let assets = base;
 const initial = { base, assets };
@@ -124,6 +124,7 @@ const options = {
 				align-items: center;
 				justify-content: center;
 				height: 100vh;
+				margin: 0;
 			}
 
 			.error {
@@ -169,7 +170,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "zdnwcc"
+  version_hash: "1ypt4cd"
 };
 function get_hooks() {
   return {};

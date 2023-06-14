@@ -1,5 +1,5 @@
-import { c as create_ssr_component, d as compute_rest_props, h as getContext, s as spread, g as escape_attribute_value, f as escape_object, b as escape } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, h as compute_rest_props, g as getContext, i as spread, j as escape_attribute_value, k as escape_object, e as escape } from "./index.js";
+import { t as twMerge } from "./tw-merge.js";
 const ToolbarButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["color", "name", "ariaLabel", "size", "href"]);
   const background = getContext("background");
@@ -43,7 +43,7 @@ const ToolbarButton = create_ssr_component(($$result, $$props, $$bindings, slots
     $$bindings.size(size);
   if ($$props.href === void 0 && $$bindings.href && href !== void 0)
     $$bindings.href(href);
-  buttonClass = classNames(
+  buttonClass = twMerge(
     "focus:outline-none whitespace-normal",
     sizing[size],
     colors[color],

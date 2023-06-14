@@ -1,10 +1,9 @@
-import { c as create_ssr_component, v as validate_component, b as escape } from "../../chunks/index.js";
-import "classnames";
+import { c as create_ssr_component, v as validate_component, e as escape } from "../../chunks/index.js";
 /* empty css                                                    */import { N as Navbar, a as NavBrand, b as NavHamburger, c as NavUl, d as NavLi } from "../../chunks/NavUl.js";
 import { I as Img } from "../../chunks/Img.js";
 const app$1 = "";
 const app = "";
-const MyNavbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const Mynavbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let bird_nerd = "Goldcrest Images";
   return `${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {
     default: ({ hidden, toggle }) => {
@@ -68,7 +67,7 @@ const MyNavbar = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   })}`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="flex flex-col flex-grow">${validate_component(MyNavbar, "MyNavbar").$$render($$result, {}, {}, {})}</div>
+  return `<div class="flex flex-col flex-grow">${validate_component(Mynavbar, "Mynavbar").$$render($$result, {}, {}, {})}</div>
 ${slots.default ? slots.default({}) : ``}`;
 });
 export {

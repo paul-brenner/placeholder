@@ -1,5 +1,4 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
-import "classnames";
 /* empty css                                                       */import { N as Navbar, a as NavBrand, b as NavHamburger, c as NavUl, d as NavLi } from "../../../chunks/NavUl.js";
 import { I as Img } from "../../../chunks/Img.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

@@ -1,5 +1,4 @@
 <script>
-	import MyNavbar from '/src/routes/MyNavbar.svelte';
 	import { Listgroup } from 'flowbite-svelte';
 
 	let list1 = ['Architect', 'Babysitter', 'Car Broker', 'Contractor', 'Dentist'];

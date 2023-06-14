@@ -1,5 +1,4 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index.js";
-import "classnames";
 import { C as Card } from "../../chunks/Card.js";
 /* empty css                                                    */import { I as Img } from "../../chunks/Img.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

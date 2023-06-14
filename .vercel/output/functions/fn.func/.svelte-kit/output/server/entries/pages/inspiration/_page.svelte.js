@@ -1,5 +1,4 @@
-import { c as create_ssr_component, v as validate_component, b as escape } from "../../../chunks/index.js";
-import "classnames";
+import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index.js";
 /* empty css                                                       */import { L as Listgroup } from "../../../chunks/Listgroup.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let list1 = ["Architect", "Babysitter", "Car Broker", "Contractor", "Dentist"];

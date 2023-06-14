@@ -1,5 +1,5 @@
-import { c as create_ssr_component, d as compute_rest_props, s as spread, f as escape_object, j as is_void, h as getContext, v as validate_component, b as escape, g as escape_attribute_value, a as add_attribute, l as compute_slots } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, h as compute_rest_props, i as spread, k as escape_object, l as is_void, j as escape_attribute_value, d as add_attribute, g as getContext, v as validate_component, e as escape, q as compute_slots } from "./index.js";
+import { t as twMerge } from "./tw-merge.js";
 const Wrapper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["tag", "show", "use"]);
   let { tag = "div" } = $$props;
@@ -15,6 +15,44 @@ const Wrapper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${show ? `${((tag$1) => {
     return tag$1 ? `<${tag}${spread([escape_object($$restProps)], {})}>${is_void(tag$1) ? "" : `${slots.default ? slots.default({}) : ``}`}${is_void(tag$1) ? "" : `</${tag$1}>`}` : "";
   })(tag)}` : `${slots.default ? slots.default({}) : ``}`}
+
+`;
+});
+const Label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let labelClass;
+  let $$restProps = compute_rest_props($$props, ["color", "defaultClass", "show"]);
+  let { color = "gray" } = $$props;
+  let { defaultClass = "text-sm font-medium block" } = $$props;
+  let { show = true } = $$props;
+  let node;
+  const colorClasses = {
+    gray: "text-gray-900 dark:text-gray-300",
+    green: "text-green-700 dark:text-green-500",
+    red: "text-red-700 dark:text-red-500",
+    disabled: "text-gray-400 dark:text-gray-500"
+  };
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.defaultClass === void 0 && $$bindings.defaultClass && defaultClass !== void 0)
+    $$bindings.defaultClass(defaultClass);
+  if ($$props.show === void 0 && $$bindings.show && show !== void 0)
+    $$bindings.show(show);
+  {
+    {
+      color = color;
+    }
+  }
+  labelClass = twMerge(defaultClass, colorClasses[color], $$props.class);
+  return `${show ? `
+  <label${spread(
+    [
+      escape_object($$restProps),
+      {
+        class: escape_attribute_value(labelClass)
+      }
+    ],
+    {}
+  )}${add_attribute("this", node, 0)}>${slots.default ? slots.default({}) : ``}</label>` : `${slots.default ? slots.default({}) : ``}`}
 
 `;
 });
@@ -38,7 +76,7 @@ const Input = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     red: "border-red-500 dark:border-red-400"
   };
   const ringClasses = {
-    base: "focus:border-blue-500 focus:ring-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500",
+    base: "focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500",
     green: "focus:ring-green-500 focus:border-green-500 dark:focus:border-green-500 dark:focus:ring-green-500",
     red: "focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-500 dark:focus:border-red-500"
   };
@@ -73,7 +111,18 @@ const Input = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   {
     {
       const _color = color === "base" && background ? "tinted" : color;
-      inputClass = classNames(defaultClass, $$slots.left && leftPadding[_size], $$slots.right && rightPadding[_size], ringClasses[color], colorClasses[_color], borderClasses[_color], inputPadding[_size], textSizes[_size], group || "rounded-lg", group && "first:rounded-l-lg last:rounded-r-lg", group && "border-l-0 first:border-l last:border-r", $$props.class);
+      inputClass = twMerge([
+        defaultClass,
+        $$slots.left && leftPadding[_size] || $$slots.right && rightPadding[_size] || inputPadding[_size],
+        ringClasses[color],
+        colorClasses[_color],
+        borderClasses[_color],
+        textSizes[_size],
+        group || "rounded-lg",
+        group && "first:rounded-l-lg last:rounded-r-lg",
+        group && "border-l-0 first:border-l last:border-r",
+        $$props.class
+      ]);
     }
   }
   return `${validate_component(Wrapper, "Wrapper").$$render(
@@ -111,5 +160,6 @@ const Input = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 `;
 });
 export {
-  Input as I
+  Input as I,
+  Label as L
 };

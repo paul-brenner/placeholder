@@ -1,5 +1,5 @@
 import { b as base, a as assets, r as reset, p as public_env, o as options, g as get_hooks, s as set_public_env } from "./chunks/internal.js";
-import { n as noop, q as safe_not_equal } from "./chunks/index.js";
+import { n as noop, s as safe_not_equal } from "./chunks/index.js";
 const DEV = false;
 function negotiate(accept, types) {
   const parts = [];
@@ -108,7 +108,7 @@ function exec(match, params, matchers) {
       result[param.name] = value;
       const next_param = params[i + 1];
       const next_value = values[i + 1];
-      if (next_param && !next_param.rest && next_param.optional && next_value) {
+      if (next_param && !next_param.rest && next_param.optional && next_value && param.chained) {
         buffered = 0;
       }
       continue;
@@ -3212,8 +3212,8 @@ const valid_layout_exports = /* @__PURE__ */ new Set([
   "config"
 ]);
 const valid_page_exports = /* @__PURE__ */ new Set([...valid_layout_exports, "entries"]);
-const valid_layout_server_exports = /* @__PURE__ */ new Set([...valid_layout_exports, "actions"]);
-const valid_page_server_exports = /* @__PURE__ */ new Set([...valid_layout_server_exports, "entries"]);
+const valid_layout_server_exports = /* @__PURE__ */ new Set([...valid_layout_exports]);
+const valid_page_server_exports = /* @__PURE__ */ new Set([...valid_layout_server_exports, "actions", "entries"]);
 const valid_server_exports = /* @__PURE__ */ new Set([
   "GET",
   "POST",

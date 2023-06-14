@@ -1,5 +1,5 @@
-import { c as create_ssr_component, d as compute_rest_props, i as setContext, s as spread, f as escape_object, g as escape_attribute_value, a as add_attribute, j as is_void, n as noop } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, h as compute_rest_props, a as setContext, i as spread, k as escape_object, j as escape_attribute_value, d as add_attribute, l as is_void, n as noop } from "./index.js";
+import { t as twMerge } from "./tw-merge.js";
 const Frame = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, [
     "tag",
@@ -80,8 +80,8 @@ const Frame = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     navbar: "border-gray-100 dark:border-gray-700",
     navbarUl: "border-gray-100 dark:border-gray-700",
     form: "border-gray-300 dark:border-gray-700",
-    primary: "border-primary-500 dark:bg-primary-200 ",
-    orange: "border-orange-300 dark:bg-orange-800",
+    primary: "border-primary-500 dark:border-primary-200 ",
+    orange: "border-orange-300 dark:border-orange-800",
     none: ""
   };
   let divClass;
@@ -109,7 +109,7 @@ const Frame = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   {
     setContext("color", color);
   }
-  divClass = classNames(bgColors[color], textColors[color], rounded && (color === "dropdown" ? "rounded" : "rounded-lg"), border && "border", borderColors[color], shadow && "shadow-md", $$props.class);
+  divClass = twMerge(bgColors[color], textColors[color], rounded && (color === "dropdown" ? "rounded" : "rounded-lg"), border && "border", borderColors[color], shadow && "shadow-md", $$props.class);
   return `${transition ? `${((tag$1) => {
     return tag$1 ? `<${tag}${spread([escape_object($$restProps), { class: escape_attribute_value(divClass) }], {})}${add_attribute("this", node, 0)}>${is_void(tag$1) ? "" : `${slots.default ? slots.default({}) : ``}`}${is_void(tag$1) ? "" : `</${tag$1}>`}` : "";
   })(tag)}` : `${((tag$1) => {

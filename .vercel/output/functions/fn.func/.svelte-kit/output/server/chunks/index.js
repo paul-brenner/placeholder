@@ -1,5 +1,6 @@
 function noop() {
 }
+const identity = (x) => x;
 function run(fn) {
   return fn();
 }
@@ -246,30 +247,27 @@ function add_attribute(name, value, boolean) {
   const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
   return ` ${name}${assignment}`;
 }
-function add_classes(classes) {
-  return classes ? ` class="${classes}"` : "";
-}
 function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${escape_attribute_value(style_object[key])};`).join(" ");
 }
 export {
-  add_attribute as a,
-  escape as b,
+  setContext as a,
+  subscribe as b,
   create_ssr_component as c,
-  compute_rest_props as d,
-  each as e,
-  escape_object as f,
-  escape_attribute_value as g,
-  getContext as h,
-  setContext as i,
-  is_void as j,
-  subscribe as k,
-  compute_slots as l,
-  createEventDispatcher as m,
+  add_attribute as d,
+  escape as e,
+  each as f,
+  getContext as g,
+  compute_rest_props as h,
+  spread as i,
+  escape_attribute_value as j,
+  escape_object as k,
+  is_void as l,
+  missing_component as m,
   noop as n,
-  add_classes as o,
-  missing_component as p,
-  safe_not_equal as q,
-  spread as s,
+  identity as o,
+  createEventDispatcher as p,
+  compute_slots as q,
+  safe_not_equal as s,
   validate_component as v
 };

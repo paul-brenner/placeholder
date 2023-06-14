@@ -1,5 +1,5 @@
-import { c as create_ssr_component, d as compute_rest_props, a as add_attribute, s as spread, f as escape_object, g as escape_attribute_value } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, h as compute_rest_props, d as add_attribute, i as spread, k as escape_object, j as escape_attribute_value } from "./index.js";
+import { t as twMerge } from "./tw-merge.js";
 const Img = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, [
     "caption",
@@ -43,12 +43,12 @@ const Img = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.effect(effect);
   if ($$props.captionClass === void 0 && $$bindings.captionClass && captionClass !== void 0)
     $$bindings.captionClass(captionClass);
-  return `${caption ? `<figure${add_attribute("class", figClass, 0)}><img${add_attribute("class", classNames(imgClass, size, alignment, effect, $$props.class), 0)}${add_attribute("src", src, 0)}${add_attribute("srcset", srcset, 0)}${add_attribute("alt", alt, 0)}>
+  return `${caption ? `<figure${add_attribute("class", figClass, 0)}><img${add_attribute("class", twMerge(imgClass, size, alignment, effect, $$props.class), 0)}${add_attribute("src", src, 0)}${add_attribute("srcset", srcset, 0)}${add_attribute("alt", alt, 0)}>
     <figcaption${add_attribute("class", captionClass, 0)}><!-- HTML_TAG_START -->${caption}<!-- HTML_TAG_END --></figcaption></figure>` : `<img${spread(
     [
       escape_object($$restProps),
       {
-        class: escape_attribute_value(classNames(imgClass, size, alignment, effect, $$props.class))
+        class: escape_attribute_value(twMerge(imgClass, size, alignment, effect, $$props.class))
       },
       { src: escape_attribute_value(src) },
       { srcset: escape_attribute_value(srcset) },

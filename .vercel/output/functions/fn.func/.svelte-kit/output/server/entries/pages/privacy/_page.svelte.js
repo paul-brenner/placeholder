@@ -1,5 +1,4 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
-import "classnames";
 import { C as Card } from "../../../chunks/Card.js";
 /* empty css                                                       */const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div class="flex flex-col flex-grow"><div class="flex flex-col flex-grow items-center justify-center py-20">${validate_component(Card, "Card").$$render(

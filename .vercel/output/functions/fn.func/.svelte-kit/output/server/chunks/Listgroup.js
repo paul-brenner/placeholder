@@ -1,5 +1,5 @@
-import { c as create_ssr_component, h as getContext, a as add_attribute, b as escape, d as compute_rest_props, i as setContext, v as validate_component, e as each } from "./index.js";
-import classNames from "classnames";
+import { c as create_ssr_component, g as getContext, d as add_attribute, e as escape, h as compute_rest_props, a as setContext, v as validate_component, f as each } from "./index.js";
+import { t as twMerge } from "./tw-merge.js";
 import { F as Frame } from "./Frame.js";
 const ListgroupItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { active = getContext("active") } = $$props;
@@ -40,7 +40,7 @@ const ListgroupItem = create_ssr_component(($$result, $$props, $$bindings, slots
   if ($$props.itemDefaultClass === void 0 && $$bindings.itemDefaultClass && itemDefaultClass !== void 0)
     $$bindings.itemDefaultClass(itemDefaultClass);
   state = disabled ? "disabled" : current ? "current" : "normal";
-  itemClass = classNames(itemDefaultClass, states[state], active && state === "disabled" && "cursor-not-allowed", active && state === "normal" && hoverClass, active && state === "normal" && focusClass, $$props.class);
+  itemClass = twMerge(itemDefaultClass, states[state], active && state === "disabled" && "cursor-not-allowed", active && state === "normal" && hoverClass, active && state === "normal" && focusClass, $$props.class);
   return `${!active ? `<li${add_attribute("class", itemClass, 0)}>${slots.default ? slots.default({ item: $$props }) : ``}</li>` : `${href ? `<a${add_attribute("href", href, 0)} class="${"block " + escape(itemClass, true)}"${add_attribute("aria-current", current, 0)}>${slots.default ? slots.default({ item: $$props }) : ``}</a>` : `<button type="button" class="${"inline-flex relative items-center text-left " + escape(itemClass, true)}" ${disabled ? "disabled" : ""}${add_attribute("aria-current", current, 0)}>${slots.default ? slots.default({ item: $$props }) : ``}</button>`}`}
 
 `;
@@ -60,7 +60,7 @@ const Listgroup = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   {
     setContext("active", active);
   }
-  groupClass = classNames(defaultClass, $$props.class);
+  groupClass = twMerge(defaultClass, $$props.class);
   return `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, { tag: active ? "div" : "ul" }, $$restProps, { rounded: true }, { border: true }, { class: groupClass }), {}, {
     default: () => {
       return `${items.length ? each(items, (item, index) => {
