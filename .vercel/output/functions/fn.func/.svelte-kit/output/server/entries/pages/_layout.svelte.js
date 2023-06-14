@@ -33,14 +33,10 @@ const Mynavbar = create_ssr_component(($$result, $$props, $$bindings, slots) => 
               return `Home`;
             }
           })}
-		${validate_component(NavLi, "NavLi").$$render($$result, { href: "/personal_links" }, {}, {
+		
+		${validate_component(NavLi, "NavLi").$$render($$result, { href: "/feed" }, {}, {
             default: () => {
-              return `Personal Links`;
-            }
-          })}
-		${validate_component(NavLi, "NavLi").$$render($$result, { href: "/inspiration" }, {}, {
-            default: () => {
-              return `Inspiration`;
+              return `Feed`;
             }
           })}
 		${validate_component(NavLi, "NavLi").$$render($$result, { href: "/privacy" }, {}, {

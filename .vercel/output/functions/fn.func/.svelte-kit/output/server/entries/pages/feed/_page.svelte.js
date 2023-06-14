@@ -1,5 +1,4 @@
 import { c as create_ssr_component, d as add_attribute, f as each, e as escape, v as validate_component } from "../../../chunks/index.js";
-import "airtable";
 /* empty css                                                       */const Activity = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { olClass = "relative border-l border-gray-200 dark:border-gray-700" } = $$props;
   if ($$props.olClass === void 0 && $$bindings.olClass && olClass !== void 0)
@@ -25,27 +24,43 @@ const ActivityItem = create_ssr_component(($$result, $$props, $$bindings, slots)
 `;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let activities = [
+  let test_activities_map = [
     {
-      title: 'Bonnie moved <a href="/" class="font-semibold text-primary-600 dark:text-primary-500 hover:underline">Jese Leos</a> to <span class="bg-gray-100 text-gray-800 text-xs font-normal mr-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300">Funny Group</span>',
+      user: "A User",
+      specialty: "Hair Stylist",
+      location: "Williamsburg",
+      color: "teal"
+    },
+    {
+      user: "A User",
+      specialty: "Pumber",
+      location: "Los Angeles",
+      color: "pink"
+    },
+    {
+      user: "A User",
+      specialty: "Bike Mechanic",
+      location: "1908 W Chicago Ave, Chicago, IL 60622",
+      color: "red"
+    },
+    {
+      user: "Paul",
+      specialty: "Barber",
+      location: "NYC",
+      color: "blue"
+    }
+  ];
+  let activities = test_activities_map.map((activity) => {
+    let text_class = `font-bold text-ctpf-${activity.color}`;
+    let specialty_class = `outline outline-ctpf-${activity.color} text-gray-800 text-xs font-normal mr-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300`;
+    let location_class = `bg-ctpf-${activity.color} text-gray-800 text-xs font-normal mr-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300`;
+    return {
+      title: `<span class="${text_class}">${activity.user}</span> recommended a <span class="${specialty_class}">${activity.specialty}</span>in <span class="${location_class}">${activity.location}</span>`,
       date: "just now",
       alt: "image alt here",
       src: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"
-    },
-    {
-      title: "We don’t serve their kind here! What? Your droids. ",
-      date: "2 hours ago",
-      alt: "image alt here",
-      src: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png",
-      text: "The approach will not be easy. You are required to maneuver straight down this trench and skim the surface to this point. The target area is only two meters wide. "
-    },
-    {
-      title: "They’ll have to wait outside. We don’t want them here. ",
-      date: "1 day ago",
-      alt: "image alt here",
-      src: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"
-    }
-  ];
+    };
+  });
   return `
 
 

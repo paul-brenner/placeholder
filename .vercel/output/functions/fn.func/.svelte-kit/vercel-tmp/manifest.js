@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([".DS_Store","favicon.png","images/crow-crown.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.9b49ad86.js","app":"_app/immutable/entry/app.ebadf88d.js","imports":["_app/immutable/entry/start.9b49ad86.js","_app/immutable/chunks/index.651b1808.js","_app/immutable/chunks/singletons.a5b9edd8.js","_app/immutable/entry/app.ebadf88d.js","_app/immutable/chunks/index.651b1808.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.e66eefc0.js","app":"_app/immutable/entry/app.73458851.js","imports":["_app/immutable/entry/start.e66eefc0.js","_app/immutable/chunks/index.651b1808.js","_app/immutable/chunks/singletons.ec8fc3b5.js","_app/immutable/entry/app.73458851.js","_app/immutable/chunks/index.651b1808.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('../output/server/nodes/0.js'),
 			() => import('../output/server/nodes/1.js'),
